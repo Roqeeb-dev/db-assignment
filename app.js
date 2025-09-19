@@ -9,6 +9,10 @@ app.listen(3000, () => console.log("Server running on port 3000"));
 
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Shafiriyu Roqeeb Taiwo");
+});
+
 app.post("/notes", async (req, res) => {
   try {
     const { title, content } = req.body;
