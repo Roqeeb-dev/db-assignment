@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Roqeeb-dev/db-assignment#readme",
   "dependencies": {
     "express": "^5.1.0",
+    "mongoose": "^8.18.1",
     "nodemon": "^3.1.10"
   }
 }
