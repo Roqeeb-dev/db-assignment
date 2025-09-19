@@ -9,7 +9,6 @@ app.listen(3000, () => console.log("Server running on port 3000"));
 
 app.use(express.json());
 
-// CREATE - Add new note
 app.post("/notes", async (req, res) => {
   try {
     const { title, content } = req.body;
@@ -21,7 +20,6 @@ app.post("/notes", async (req, res) => {
   }
 });
 
-// READ - Get all notes
 app.get("/notes", async (req, res) => {
   try {
     const allnotes = await Notes.find();
@@ -32,14 +30,13 @@ app.get("/notes", async (req, res) => {
   }
 });
 
-// UPDATE - Update a note by ID
 app.put("/notes/:id", async (req, res) => {
   try {
     const { title, content } = req.body;
     const updatedNote = await Notes.findByIdAndUpdate(
       req.params.id,
       { title, content },
-      { new: true, runValidators: true } // return updated note, validate fields
+      { new: true, runValidators: true }
     );
 
     if (!updatedNote) {
@@ -53,7 +50,6 @@ app.put("/notes/:id", async (req, res) => {
   }
 });
 
-// DELETE - Delete a note by ID
 app.delete("/notes/:id", async (req, res) => {
   try {
     const deletedNote = await Notes.findByIdAndDelete(req.params.id);
