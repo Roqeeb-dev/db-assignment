@@ -1,0 +1,24 @@
+{
+  "name": "db-assignment",
+  "version": "1.0.0",
+  "description": "This is the assignment mallam Hassan gave us to implement the update endpoint and delete endpoint",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Roqeeb-dev/db-assignment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Roqeeb-dev/db-assignment/issues"
+  },
+  "homepage": "https://github.com/Roqeeb-dev/db-assignment#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
